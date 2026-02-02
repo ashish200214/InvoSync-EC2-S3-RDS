@@ -1,0 +1,232 @@
+/* CustomerFiles.css
+   Scoped styles for CustomerFiles page.
+   Safe: uses .customer-files-page prefix so it won't affect other pages.
+*/
+
+/* Page container (keeps layout stable with sidebar) */
+.customer-files-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f3f7fb;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;
+}
+
+/* content wrapper so header/footer remain separate */
+.customer-files-page .content-container {
+  max-width: 1100px;
+  margin: 26px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.06);
+  box-sizing: border-box;
+}
+
+/* Page title */
+.customer-files-page .page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 4px 0 18px 0;
+  color: #0f172a;
+}
+
+/* Search row: input + button */
+.customer-files-page .search-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Input */
+.customer-files-page .search-input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d6dce6;
+  background: #fbfdff;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow .12s ease, border-color .12s ease, transform .06s ease;
+  box-sizing: border-box;
+}
+
+.customer-files-page .search-input::placeholder {
+  color: #9aa4b2;
+}
+
+.customer-files-page .search-input:focus {
+  border-color: #2b6cb0;
+  box-shadow: 0 6px 18px rgba(43,108,176,0.12);
+  transform: translateY(-1px);
+}
+
+/* Button */
+.customer-files-page .search-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background .12s ease, transform .06s ease;
+  white-space: nowrap;
+}
+
+.customer-files-page .search-btn:hover:not(:disabled) {
+  background: #065fd6;
+  transform: translateY(-1px);
+}
+
+.customer-files-page .search-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Message area */
+.customer-files-page .message {
+  margin-top: 8px;
+  color: #b02a37;
+  font-weight: 600;
+}
+
+/* Grid of file cards */
+.customer-files-page .files-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+
+/* Individual card */
+.customer-files-page .file-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 8px 26px rgba(2,6,23,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 220px; /* keeps layout consistent even if name short */
+  box-sizing: border-box;
+}
+
+/* Large image preview for image files */
+.customer-files-page .file-img-large {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Icon blocks for PDFs/CDR/other */
+.customer-files-page .file-icon-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(2,6,23,0.04);
+}
+
+/* visual variants */
+.customer-files-page .file-icon-block.pdf { background: linear-gradient(180deg,#fff5f5,#fff0f0); }
+.customer-files-page .file-icon-block.cdr { background: linear-gradient(180deg,#f0fdfa,#e6fbf9); }
+.customer-files-page .file-icon-block.other { background: linear-gradient(180deg,#f7f9fc,#f3f6fb); }
+
+/* file name: single-line ellipsis (prevents overlap) */
+.customer-files-page .file-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* date below name */
+.customer-files-page .file-date {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* actions row */
+.customer-files-page .card-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: auto; /* push buttons to bottom */
+  width: 100%;
+}
+
+/* button styles inside card */
+.customer-files-page .file-btn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.customer-files-page .file-btn.secondary {
+  background: #e6eefc;
+  color: #0d4fc9;
+  font-weight: 700;
+}
+
+/* modal preview */
+.customer-files-page .modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1400;
+}
+
+.customer-files-page .modal-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  max-width: 92%;
+  max-height: 92%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.customer-files-page .modal-img-large {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: 8px auto;
+}
+
+/* small-screen adjustments */
+@media (max-width: 720px) {
+  .customer-files-page .content-container { margin: 12px; padding: 12px; }
+  .customer-files-page .file-img-large { height: 140px; }
+  .customer-files-page .search-row { flex-direction: column; align-items: stretch; }
+  .customer-files-page .search-btn { width: 100%; }
+}
+
+/* Prevent global CSS leakage: avoid generic selectors like input, button outside the namespace. */

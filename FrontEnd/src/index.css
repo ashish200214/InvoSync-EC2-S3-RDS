@@ -1,0 +1,60 @@
+/* ---------- Reset & base ---------- */
+* { box-sizing: border-box; }
+html,body,#root { height:100%; margin:0; font-family: Arial, Helvetica, sans-serif; background:#f1f5f9; color:#222; }
+
+/* ---------- Layout ---------- */
+.app-root { display:flex; min-height:100vh; }
+.sidebar { width:260px; background: linear-gradient(180deg,#0f172a,#0b3a66); color:#fff; padding:18px 14px; }
+.main-area { flex:1; display:flex; flex-direction:column; min-height:100vh; }
+.topnav { height:64px; background:#ffffff; display:flex; align-items:center; justify-content:space-between; padding:0 20px; box-shadow:0 2px 6px rgba(16,24,40,0.06); }
+.content-area { padding:28px; flex:1; }
+
+/* ---------- Sidebar ---------- */
+.sidebar .brand { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+.brand .logo { width:42px; height:42px; border-radius:8px; background:linear-gradient(135deg,#60a5fa,#0ea5a2); display:flex; align-items:center; justify-content:center; font-weight:700; color:#fff; }
+.sidebar h2 { font-size:18px; margin:0 0 12px 0; color:#e6eef8; }
+.nav-link { display:flex; align-items:center; gap:12px; padding:10px 8px; border-radius:8px; color:#dbeafe; text-decoration:none; margin-bottom:6px; cursor:pointer; }
+.nav-link:hover { background: rgba(255,255,255,0.05); color:#fff; }
+.nav-link.active { background: rgba(255,255,255,0.08); color:#fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); }
+
+/* ---------- Top nav ---------- */
+.topnav .left { display:flex; align-items:center; gap:18px; }
+.topnav h1 { margin:0; font-size:18px; color:#0b1220; }
+.topnav .actions { display:flex; gap:10px; align-items:center; }
+
+/* ---------- Cards & tables ---------- */
+.card { background:#fff; border-radius:10px; padding:18px; box-shadow:0 6px 18px rgba(15,23,42,0.06); }
+.table { width:100%; border-collapse:collapse; }
+.table th, .table td { text-align:left; padding:10px 12px; border-bottom:1px solid #eef2f6; }
+.table th { font-size:13px; color:#334155; background: linear-gradient(180deg,#f8fafc,#ffffff); }
+.btn { display:inline-block; padding:8px 12px; border-radius:8px; cursor:pointer; border:0; font-weight:600; }
+.btn-primary { background: linear-gradient(90deg,#0ea5e9,#3b82f6); color:#fff; }
+.btn-ghost { background:transparent; border:1px solid #e6eef8; color:#0b1220; }
+.actions-row { display:flex; gap:8px; }
+
+/* ---------- Form ---------- */
+.form-row { display:flex; gap:12px; margin-bottom:12px; }
+.form-row .field { flex:1; display:flex; flex-direction:column; gap:6px; }
+input[type="text"], input[type="email"], input[type="number"], textarea, select {
+  padding:8px 10px; border-radius:8px; border:1px solid #d1d5db; font-size:14px; background:#fff;
+}
+textarea { min-height:100px; resize:vertical; }
+
+/* ---------- SendQuotation specific ---------- */
+.send-quotation { max-width:900px; margin:0 auto; }
+.item-row { display:flex; gap:10px; margin-bottom:8px; align-items:center; }
+.item-row input { padding:8px; border-radius:6px; border:1px solid #e2e8f0; }
+
+/* ---------- Misc ---------- */
+.center { text-align:center; }
+.small { font-size:13px; color:#6b7280; }
+
+/* ---------- Footer ---------- */
+.footer { height:48px; display:flex; align-items:center; justify-content:center; color:#6b7280; background:transparent; }
+
+/* responsive */
+@media (max-width:900px) {
+  .sidebar { display:none; }
+  .app-root { flex-direction:column; }
+  .topnav { position:sticky; top:0; z-index:20; }
+}

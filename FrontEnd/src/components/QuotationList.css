@@ -1,0 +1,110 @@
+/* Container Styling */
+.quotation-list-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* light background */
+  color: #222; /* readable dark text */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.quotation-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white; /* ensure contrast */
+}
+
+.quotation-table th,
+.quotation-table td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+  color: #222; /* visible text color */
+  font-size: 0.95em;
+}
+
+.quotation-table th {
+  background-color: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quotation-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.quotation-table tr:hover {
+  background-color: #eaf3ff;
+  transition: 0.2s ease-in;
+}
+
+/* Buttons inside table cells */
+.quotation-table button {
+  padding: 4px 8px;      /* compact */
+  font-size: 0.85em;     /* smaller text */
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin: 2px 0;         /* small spacing vertically */
+  transition: 0.3s ease;
+}
+
+.quotation-table .confirm-order {
+  background-color: #28a745; /* green */
+  color: white;
+}
+
+.quotation-table .confirm-order:hover {
+  background-color: #218838;
+}
+
+.quotation-table .order-confirmed {
+  background-color: #6c757d; /* gray */
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Status / Loading */
+.no-data,
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 20px;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quotation-list-container {
+    padding: 15px;
+  }
+
+  .quotation-table th,
+  .quotation-table td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .quotation-table button {
+    padding: 3px 6px;
+    font-size: 0.8em;
+  }
+}
+.nav-btn {
+  background: #0066cc;
+  color: white;
+  padding: 8px 14px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #004d99;
+}

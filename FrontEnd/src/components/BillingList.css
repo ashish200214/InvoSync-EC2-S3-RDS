@@ -1,0 +1,49 @@
+.billing-list-container {
+  max-width: 980px;
+  margin: 30px auto;
+  padding: 18px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  font-family: Arial, sans-serif;
+}
+
+.billing-list-container h2 {
+  margin-bottom: 12px;
+  color: #202020;
+}
+
+.billing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.billing-table th, .billing-table td {
+  border: 1px solid #e6e6e6;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.billing-table th {
+  background: #f4f7fb;
+  color: #333;
+}
+
+.billing-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.actions button {
+  margin-right: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.actions button:last-child {
+  background: #28a745;
+}

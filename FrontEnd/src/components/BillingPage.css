@@ -1,0 +1,99 @@
+.billing-page {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.billing-card {
+  width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.customer-block {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.items-section h3 { margin-top: 6px; margin-bottom: 10px; }
+
+.item-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.item-input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.item-input.name { flex: 1.6; min-width: 220px; }
+.item-input.qty { width: 80px; text-align: right; }
+.item-input.price { width: 120px; text-align: right; }
+
+.item-total {
+  width: 120px;
+  text-align: right;
+  font-weight: 600;
+  color: #333;
+}
+
+.remove-btn {
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.total-row {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding-top: 8px;
+  border-top: 1px dashed #e7e7e7;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.send-btn {
+  padding: 10px 16px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.message {
+  margin-top: 12px;
+  color: green;
+  font-weight: 600;
+}

@@ -1,0 +1,24 @@
+.main-header {
+  background: #0066cc;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.main-header nav a {
+  margin-right: 20px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-header nav a:hover {
+  text-decoration: underline;
+}

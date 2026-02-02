@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: invosync
+      MYSQL_ROOT_HOST: '%'
+  backend:
+    image: ashish200214/invosync-backend-img
+    ports:
+      - "9090:9090"
+    environment:
+      JDBC_URL: ${JDBC_URL}
+      ACCESS_KEY: ${ACCESS_KEY}
+      SECRET_KEY: ${SECRET_KEY}
+      BUCKET_NAME: ${BUCKET_NAME}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      BASE_URL: ${BASE_URL}
+  frontend:
+    image: invosync_frontend_image
+    ports:
+      - "443:443"
+    build:
+      context: ./FrontEnd
+      args:
+        VITE_API_URL: https://ashg.online/api
+    volumes:
+      - nginx-volume:/etc/nginx/conf.d/
+      - certificate-volume:/etc/ssl/
+
+volumes:
+  db-volume:
+  nginx-volume:
+  certificate-volume:

@@ -1,0 +1,186 @@
+/* ===== GLOBAL PAGE LAYOUT ===== */
+.send-quotation-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd, #fff);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== CARD CONTAINER ===== */
+.form-container {
+  width: 750px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 35px 40px;
+
+  /* Safari / iOS support */
+  -webkit-backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/* ===== FORM TITLE ===== */
+.form-container h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #004a99;
+  margin-bottom: 25px;
+}
+
+/* ===== CUSTOMER INFO BLOCK ===== */
+.customer-info {
+  background: #f0f7ff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 4px solid #007bff;
+}
+
+.customer-info p {
+  margin: 6px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===== FORM ITEMS ===== */
+.item-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* ===== INPUT FIELDS ===== */
+.item-row input,
+.form-group input,
+textarea,
+input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #b5c7d3;
+  background: #f9fcff;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.item-row input:focus,
+.form-group input:focus,
+textarea:focus {
+  border-color: #007bff;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  outline: none;
+}
+
+/* ===== REMOVE ITEM BUTTON ===== */
+.remove-btn {
+  background: #ff4d4d;
+  border: none;
+  padding: 5px 12px;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.remove-btn:hover {
+  background: #d40000;
+}
+
+/* ===== ADD ITEM BUTTON ===== */
+.add-item-btn {
+  margin-top: 15px;
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.add-item-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* ===== FILE UPLOAD GROUPS ===== */
+.form-group {
+  margin-top: 25px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #003f7d;
+  display: block;
+}
+
+.form-group input[type="file"] {
+  padding: 10px;
+  background: #f1faff;
+  border-radius: 10px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #28a745, #20c25e);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.25);
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #218838, #1aa84e);
+  transform: translateY(-3px);
+}
+
+/* ===== SUCCESS / ERROR MESSAGE ===== */
+.message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #004a80;
+}
+
+/* ===== LOADING TEXT ===== */
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} /* fadeIn animation ends */
